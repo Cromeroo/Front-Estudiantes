@@ -46,7 +46,7 @@ const ConsultaEstudiantes = () => {
       }
 
       const response = await axios.get(
-        `http://localhost:8002/api/estudiantes/${documento}`,
+        `https://back-estudiantes.onrender.com/api/estudiantes/${documento}`,
         {
           headers: {
             "x-auth-token": token,

@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8002/api/auth/login",
+        "https://back-estudiantes.onrender.com/api/auth/login",
         { email, password }
       );
       setMessage("Login successful!");
@@ -28,11 +28,14 @@ const Login = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8002/api/auth/register", {
-        username,
-        email,
-        password,
-      });
+      await axios.post(
+        "https://back-estudiantes.onrender.com/api/auth/register",
+        {
+          username,
+          email,
+          password,
+        }
+      );
       setMessage("Registration successful! Please login.");
       setIsRegister(false);
     } catch (error) {
